@@ -1,16 +1,17 @@
-%Polar Non Return to Zero Line Coding
+%Unipolar Non Return to Zero Line Coding
 clc;
 clear all;
 close all;
 N=10;
 %Number of bits
-n=randi([0,1],1,N); %Random bit generation
+n = [1 0 1 1 0 1 1 0 0 1 ]
+% n=randi([0,1],1,N) %Random bit generation
 %Mapping Function
 for m=1:N
     if n(m)==1
         nn(m)=1;
     else
-        nn(m)=-1;
+        nn(m)=0;
     end
 end
 nn
@@ -26,8 +27,7 @@ for j=1:length(t) %Indexing set-up for time duration
         %Binary input data index increment
     end
 end
-subplot(3,1,2);
 plot(t,y, 'linewidth',2);
 axis([0,N,-1.5,1.5]); %Axis set-up
 grid on;
-title('Polar NZR Signaling');
+title('Unipolar NZR Signaling');

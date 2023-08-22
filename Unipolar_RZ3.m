@@ -3,7 +3,8 @@ clc;
 clear all;
 close all;
 N=10; %Number of bits
-n=randi([0,1],1,N) %Random bit generation
+n = [1 0 1 1 0 1 1 0 0 1 ]
+% n=randi([0,1],1,N) %Random bit generation
 %RZ Pulse Shaping
 i=1;
 a=0; %Initial value for the first half cycle
